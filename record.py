@@ -5,20 +5,9 @@ import json
 import sys
 
 n = len(sys.argv)
-
-if n < 2:
-    exit("Takes a compulsory argument - name of recording, and optional argument - record-all")
-
-if n > 3:
-    exit("Only takes two arguments - name of recording and (optional) record-all")
-
-if n == 2:
-    name_of_recording = str(sys.argv[1])
-    record_all = False
-if n == 3:
-    if str(sys.argv[2]) != "record-all":
-        exit("The second argument given must be 'record-all', otherwise only pass the name of recording as a parameter")
-    name_of_recording = str(sys.argv[1])
+name_of_recording = input("Enter participant code: ")
+record_all = False
+if n > 1:
     record_all = True
 
 print("Hold right click for more than 2 seconds (and then release) to end the recording for mouse and click 'esc' to end the recording for keyboard (both are needed to finish recording)")
